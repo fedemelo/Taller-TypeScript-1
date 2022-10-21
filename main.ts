@@ -1,11 +1,17 @@
-const coursesTbody: HTMLElement = document.getElementById('courses')!; // Nodo tbody que tiene el id="courses"
+import { Serie } from './scripts/serie.js';
+import { serie } from './scripts/data.js';
 
-function renderCoursesInTable(courses: Course[]): void {
-  courses.forEach(c => {
-    let trElement = document.createElement("tr");
-    trElement.innerHTML = `<td>${c.name}</td>
-                           <td>${c.professor}</td>
-                           <td>${c.credits}</td>`;
-    coursesTbody.appendChild(trElement);
-  });
-}
+
+
+
+// const coursesTbody: HTMLElement = document.getElementById('courses')!; // Nodo tbody que tiene el id="courses"
+
+// function renderCoursesInTable(courses: Course[]): void {
+//   courses.forEach(c => {
+//     let trElement = document.createElement("tr");
+//     trElement.innerHTML = `<td>${c.name}</td>
+//                            <td>${c.professor}</td>
+//                            <td>${c.credits}</td>`;
+//     coursesTbody.appendChild(trElement);
+//   });
+// }
