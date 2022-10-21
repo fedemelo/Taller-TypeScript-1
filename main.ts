@@ -1,17 +1,15 @@
-import { Serie } from './scripts/serie.js';
-import { serie } from './scripts/data.js';
+import { Serie } from './serie.js';
+import { series } from './data.js';
 
-
-
-
-// const coursesTbody: HTMLElement = document.getElementById('courses')!; // Nodo tbody que tiene el id="courses"
-
-// function renderCoursesInTable(courses: Course[]): void {
-//   courses.forEach(c => {
-//     let trElement = document.createElement("tr");
-//     trElement.innerHTML = `<td>${c.name}</td>
-//                            <td>${c.professor}</td>
-//                            <td>${c.credits}</td>`;
-//     coursesTbody.appendChild(trElement);
-//   });
-// }
+function insertSeries(series: Serie[]): void {
+    const tbody: HTMLElement = document.getElementById('series')!;
+    series.map(s => {
+        const tr: HTMLElement = document.createElement('tr');
+        const html: string = `<td> ${s.id} </td>
+                              <td> ${s.name} </td>
+                              <td> ${s.channel} </td>
+                              <td> ${s.seasons} </td>`
+        tr.innerHTML = html
+        tbody.appendChild(tr)
+    })
+}

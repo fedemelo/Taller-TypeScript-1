@@ -1,15 +1,15 @@
 export class Serie {
     private _id: number; 
-    private _title: string;
+    private _name: string;
     private _channel: string;
     private _seasons: number;
     private _description: string;
     private _link: string;
     private _cover: string;
     
-    constructor(_id: number, _title: string, _channel: string, _seasons: number, _description: string, _link: string, _cover: string) {
+    constructor(_id: number, _name: string, _channel: string, _seasons: number, _description: string, _link: string, _cover: string) {
         this._id = _id;
-        this._title = _title;
+        this._name = _name;
         this._channel = _channel; 
         this._seasons = _seasons;
         this._description = _description;
@@ -29,8 +29,8 @@ export class Serie {
      * Getter title
      * @return {string}
      */
-	public get title(): string {
-		return this._title;
+	public get name(): string {
+		return this._name;
 	}
 
     /**
@@ -85,8 +85,8 @@ export class Serie {
      * Setter title
      * @param {string} value
      */
-	public set title(value: string) {
-		this._title = value;
+	public set name(value: string) {
+		this._name = value;
 	}
 
     /**
