@@ -6,7 +6,7 @@ function insertSeries(series: Serie[]): void {
     console.log('Desplegando series.');
     series.map(s => {
         let tr: HTMLElement = document.createElement('tr');
-        let html: string = `<td> ${s.id} </td>
+        let html: string = `<td> <b>${s.id}</b> </td>
                               <td> <a href=${s.link} target="_blank">${s.name}</a> </td>
                               <td> ${s.channel} </td>
                               <td> ${s.seasons} </td>`;
@@ -22,7 +22,7 @@ function insertSeasonsAvrg(series: Serie[]): void {
     const avrg: number = sum / series.length;
     console.log('Desplegando promedio.')
     let table: HTMLElement = document.getElementById('tabla-series')!;
-    const html: string = '<p>Seasons average: '+avrg+'</p>'
+    const html: string = '<p> &nbsp; Seasons average: '+avrg+'</p>'
     table.insertAdjacentHTML('afterend', html)
 }
 
